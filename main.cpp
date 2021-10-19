@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
 #endif
 
     qmlRegisterType<BackEnd>("org.qml_cpp_integration.backend",1,0,"BackEnd");
-
+    //tester
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
