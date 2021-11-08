@@ -2,6 +2,7 @@
 #define BACKEND_H
 #include <QObject>
 #include <QString>
+#include "rostopic.h"
 class BackEnd : public QObject
 {
     Q_OBJECT
