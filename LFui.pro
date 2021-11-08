@@ -1,9 +1,10 @@
 QT += quick
 CONFIG += qmltypes
-QML_IMPORT_NAME = BackEnd
+QML_IMPORT_NAME = io.qt.examples.backend
 QML_IMPORT_MAJOR_VERSION = 1
 
 CONFIG += c++11
+
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -16,8 +17,9 @@ SOURCES += \
 RESOURCES += qml.qrc
 
 # Additional import path used to resolve QML modules in Qt Creator's code model
-QML_IMPORT_PATH =
+QML_IMPORT_PATH = $$PWD
 
+#LIBS += -L$$PWD\C:\Users\Jacob Carroll\Downloads\qtcsv-master\qtcsv-master\include -lqtcsv
 # Additional import path used to resolve QML modules just for Qt Quick Designer
 QML_DESIGNER_IMPORT_PATH =
 

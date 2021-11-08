@@ -4,23 +4,16 @@
 
 int main(int argc, char *argv[])
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#if defined(Q_OS_WIN)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
-
-    qmlRegisterType<BackEnd>("org.qml_cpp_integration.backend",1,0,"BackEnd");
-    //tester2
-
     QGuiApplication app(argc, argv);
-
+    //qmlRegisterType(const char *uri, int versionMajor, int versionMinor, const char *qmlName)
+    qmlRegisterType<BackEnd>("io.qt.examples.backend",1,0,"BackEnd");
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/main.qml"));
-    QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
-                     &app, [url](QObject *obj, const QUrl &objUrl) {
-        if (!obj && url == objUrl)
-            QCoreApplication::exit(-1);
-    }, Qt::QueuedConnection);
-    engine.load(url);
-
+    engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
+    if (engine.rootObjects().isEmpty())
+        return -1;
     return app.exec();
+
 }

@@ -2,7 +2,7 @@ import QtQuick 2.14
 import QtQuick.Window 2.14
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
-import org.qml_cpp_integration.backend 1.0
+import io.qt.examples.backend 1.0
 
 ApplicationWindow {
     id: root
@@ -21,7 +21,7 @@ ApplicationWindow {
             anchors.fill: parent
             Label {
                 id: status
-                text: "  MiR100 Status:   " + "Busy"
+                text: "  MiR100 Status:   " + "Not Busy"
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter
                 Layout.fillWidth: true
@@ -68,7 +68,7 @@ ApplicationWindow {
             text: qsTr("Map")
         }
     }
-
+    property string newLoc;
     // Main stack layout for the pages
     StackLayout {
         width: parent.width
