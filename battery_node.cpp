@@ -1,5 +1,4 @@
 #include "ros/ros.h"
-#include "geometry_msgs/TwistStamped.h"
 #include "mir_msgs/RobotStatus.h"
 
 void batteryCallback(const mir_msgs::RobotStatus& msg) {
