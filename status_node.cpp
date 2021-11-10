@@ -1,6 +1,9 @@
+#include <string>
 #include "ros/ros.h"
 #include "mir_msgs/RobotState.h"
-#include <string>
+#include "ros_vars.h"
+
+std::string status;
 
 void statusCallback(const mir_msgs::RobotState& msg) {
   std::string status;

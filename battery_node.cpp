@@ -1,9 +1,13 @@
 #include "ros/ros.h"
 #include "mir_msgs/RobotStatus.h"
+#include "ros_vars.h"
+
+double bp;
+double b_rem;
 
 void batteryCallback(const mir_msgs::RobotStatus& msg) {
-  int bp = msg.battery_percentage;
-  int b_rem = msg.battery_time_remaining;
+  double bp = msg.battery_percentage;
+  double b_rem = msg.battery_time_remaining;
 }
 
 int main(int argc, char **argv) {

@@ -1,9 +1,13 @@
 #include "ros/ros.h"
 #include "geometry_msgs/Twist.h"
+#include "ros_vars.h"
+
+double posx;
+double posy;
 
 void poseCallback(const geometry_msgs::Twist& msg) {
-  int posx = msg.linear.x;
-  int posy = msg.linear.y;
+  double posx = msg.linear.x;
+  double posy = msg.linear.y;
 }
 
 int main(int argc, char **argv) {
