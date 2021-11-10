@@ -6,7 +6,6 @@
 std::string status;
 
 void statusCallback(const mir_msgs::RobotState& msg) {
-  std::string status;
   switch(msg.robotState) {
     case 1:
       status = "Starting";

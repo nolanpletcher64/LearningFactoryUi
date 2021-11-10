@@ -6,8 +6,8 @@ double posx;
 double posy;
 
 void poseCallback(const geometry_msgs::Twist& msg) {
-  double posx = msg.linear.x;
-  double posy = msg.linear.y;
+  posx = msg.linear.x;
+  posy = msg.linear.y;
 }
 
 int main(int argc, char **argv) {
