@@ -14,18 +14,57 @@ Item {
             backend.newLocationChanged.connect(backend.logChange);
         }
     }
-    Text {
-        text: "Input:"
-        x: 35
-        y: 55
-        verticalAlignment: Text.AlignVCenter
-    }
     Rectangle {
         x: 20
         y: 40
         implicitHeight: 75
         implicitWidth: 490
         color: "lightgray"
+    }
+    Rectangle {
+        x: 20
+        y: 135
+        implicitHeight: 30
+        implicitWidth: 200
+        color: "lightgray"
+    }
+    Rectangle {
+        x: 20
+        y: 185
+        implicitHeight: 30
+        implicitWidth: 200
+        color: "lightgray"
+    }
+    Rectangle {
+        x: 450
+        y: 150
+        implicitHeight: 100
+        implicitWidth: 150
+        color: "lightskyblue"
+    }
+    Text {
+        text: "Valid Locations"
+        x: 480
+        y: 130
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "Package Zone 1"
+        x: 478
+        y: 155
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "Package Zone 2"
+        x: 478
+        y: 180
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "Human Loading Zone"
+        x: 462
+        y: 205
+        verticalAlignment: Text.AlignVCenter
     }
     Rectangle {
         x: 100
@@ -63,9 +102,9 @@ Item {
     }
     Text{
         id:labelBackend;
-        text: "destination"
-        x: 100
-        y: 20
+        text: "Current Task"
+        x: 115
+        y: 140
     }
     Button {
         id: submitTask
@@ -85,17 +124,59 @@ Item {
     }
     Text{
         text: "Battery"
-        x: 320
+        x: 510
         y: 280
     }
     Rectangle {
-        x: 300
+        x: 490
         y: 300
         implicitHeight: 50
         implicitWidth: 80
-        color: "blue"
+        color: "lightgray"
+    }
+    Rectangle {
+        x: 490
+        y: 300
+        implicitHeight: 50
+        implicitWidth: 8
+        color: "red"
     }
 
+    Text{
+        text: "10%"
+        x: 515
+        y: 310
+    }
+    Text {
+        text: "Input:"
+        x: 40
+        y: 50
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "Task Progress: 25%"
+        x: 25
+        y: 190
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "Box Input:"
+        x: 35
+        y: 80
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "Current Task:"
+        x: 25
+        y: 140
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "Create New Task"
+        x: 210
+        y: 20
+        verticalAlignment: Text.AlignVCenter
+    }
     Connections{// connect backend signal
         target: backend;
         onNewLocationChanged:{
