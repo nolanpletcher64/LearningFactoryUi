@@ -5,9 +5,9 @@
 double bp;
 double b_rem;
 
-void batteryCallback(const mir_msgs::RobotStatus& msg) {
-  bp = msg.battery_percentage;
-  b_rem = msg.battery_time_remaining;
+void batteryCallback(const mir_msgs::RobotStatus::ConstPtr& msg) {
+  bp = msg->battery_percentage;
+  b_rem = msg->battery_time_remaining;
 }
 
 int main(int argc, char **argv) {
