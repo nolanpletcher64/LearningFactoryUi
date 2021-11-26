@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import QtQuick.Shapes 1.15
+import QtQuick.Shapes 1.12
 //640 480
 Item {
     Rectangle {

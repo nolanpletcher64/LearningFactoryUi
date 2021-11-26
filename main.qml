@@ -1,6 +1,6 @@
-import QtQuick 2.14
-import QtQuick.Window 2.14
-import QtQuick.Controls 2.12
+import QtQuick 2.0
+import QtQuick.Window 2.0
+import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.12
 import io.qt.examples.backend 1.0
 
