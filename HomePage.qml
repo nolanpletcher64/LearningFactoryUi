@@ -2,23 +2,32 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.0
 import io.qt.examples.backend 1.0
+import Ros 1.0
+
 Item {
     //
     //visible: true
     //width: 320
     //height: 200
     //title: qsTr("C++ Type")
+
+	
+	Connections {
+		target: Ros
+		onShutdown: Qt.quit()
+	}
+
+	Subscriber {
+		id: battery_sub
+		//topic: "/robot_status"
+		topic: "/intval"
+	}
+
     BackEnd{
         id:backend;
         Component.onCompleted: {//call backend signal and slot
             backend.newLocationChanged.connect(backend.logChange);
         }
-    }
-    Text {
-        text: "Input:"
-        x: 35
-        y: 55
-        verticalAlignment: Text.AlignVCenter
     }
     Rectangle {
         x: 20
@@ -26,6 +35,12 @@ Item {
         implicitHeight: 75
         implicitWidth: 490
         color: "lightgray"
+    }	
+    Text {
+        text: "Input:"
+        x: 35
+        y: 55
+        verticalAlignment: Text.AlignVCenter
     }
     Rectangle {
         x: 100
@@ -84,25 +99,37 @@ Item {
         }
     }
     Text{
-        text: "Battery"
-        x: 320
+		//text: "Battery: "+battery_sub.message.battery_percentage
+        text: "Battery: "+battery_sub.message.data
+        x: 300
         y: 280
     }
     Rectangle {
         x: 300
         y: 300
         implicitHeight: 50
-        implicitWidth: 80
+        implicitWidth: 100
         color: "blue"
     }
+	Rectangle {
+		x: 300
+		y: 300
+		implicitHeight: 50
+		//implicitWidth: (battery_sub.message ? battery_sub.message.battery_percentage : 0)
+		implicitWidth: (battery_sub.message ? battery_sub.message.data : 0)
+		color: "green"
+	}
 
     Connections{// connect backend signal
         target: backend;
         onNewLocationChanged:{
             labelBackend.text=backend.newLocation;
         }
-
     }
+
+	Component.onCompleted: {
+		Ros.init("qml_home")
+	}
 }
 
 
