@@ -12,8 +12,7 @@ CONFIG += c++11
 
 SOURCES += \
         backend.cpp \
-        main.cpp \
-        rostopic.cpp
+        main.cpp
 
 RESOURCES += qml.qrc
 
@@ -30,5 +29,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    backend.h \
-    rostopic.h
+    backend.h
