@@ -19,8 +19,7 @@ Item {
 
 	Subscriber {
 		id: battery_sub
-		//topic: "/robot_status"
-		topic: "/intval"
+		topic: "/robot_status"
 	}
 
     BackEnd{
@@ -99,8 +98,7 @@ Item {
         }
     }
     Text{
-		//text: "Battery: "+battery_sub.message.battery_percentage
-        text: "Battery: "+battery_sub.message.data
+		text: "Battery: "+parseInt(battery_sub.message.battery_percentage,10)+"%"
         x: 300
         y: 280
     }
@@ -115,8 +113,7 @@ Item {
 		x: 300
 		y: 300
 		implicitHeight: 50
-		//implicitWidth: (battery_sub.message ? battery_sub.message.battery_percentage : 0)
-		implicitWidth: (battery_sub.message ? battery_sub.message.data : 0)
+		implicitWidth: (battery_sub.message ? parseInt(battery_sub.message.battery_percentage,10) : 0)
 		color: "green"
 	}
 
