@@ -19,5 +19,6 @@ public slots:
 
 private:
     QString m_newLocation;
+    int newBox;
 };
 #endif // BACKEND_H

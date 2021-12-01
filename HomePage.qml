@@ -2,6 +2,7 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.0
 import io.qt.examples.backend 1.0
+
 Item {
     //
     //visible: true
@@ -120,6 +121,140 @@ Item {
         onPressed: {
             backend.setNewLocation(taskInput.text);
             newLoc = taskInput.text;
+            newBox = boxInput.text;
+            //bcir.x = 250;
+            if (newBox == '1')
+                test = wtri
+            if (newBox == '2')
+                test = btri
+            if (newBox == '3')
+                test = bltri
+            if (newBox == '4')
+                test = rtri
+            if (newBox == '5')
+                test = wv
+            if (newBox == '6')
+                test = bv
+            if (newBox == '7')
+                test = blv
+            if (newBox == '8')
+                test = rv
+            if (newBox == '9')
+                test = wcir
+            if (newBox == '10')
+                test = bcir
+            if (newBox == '11')
+                test = blcir
+            if (newBox == '12')
+                test = rcir
+            if (newBox == '13')
+                test = wsqu
+            if (newBox == '14')
+                test = bsqu
+            if (newBox == '15')
+                test = blsqu
+            if (newBox == '16')
+                test = rsqu
+            if (newLoc == '1')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '2')
+            {
+                test.x = 70;
+                test.y = 137.5;
+            }
+            if (newLoc == '3')
+            {
+                test.x = 70;
+                test.y = 215;
+            }
+            if (newLoc == '4')
+            {
+                test.x = 70;
+                test.y = 292.5;
+            }
+            if (newLoc == '5')
+            {
+                test.x = 165;
+                test.y = 60;
+            }
+            if (newLoc == '6')
+            {
+                test.x = 165;
+                test.y = 137.5;
+            }
+            if (newLoc == '7')
+            {
+                test.x = 165;
+                test.y = 215;
+            }
+            if (newLoc == '8')
+            {
+                test.x = 165;
+                test.y = 292.5;
+            }
+            if (newLoc == '9')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '10')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '11')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '12')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '13')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '14')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '15')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '16')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '17')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '18')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '19')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
+            if (newLoc == '20')
+            {
+                test.x = 70;
+                test.y = 60;
+            }
         }
     }
     Text{
@@ -182,7 +317,12 @@ Item {
         onNewLocationChanged:{
             labelBackend.text=backend.newLocation;
         }
-
+    }
+    Connections{// connect backend signal
+        target: InventoryPage;
+        onNewLocationChanged:{
+            rcir.x = 250;
+        }
     }
 }
 

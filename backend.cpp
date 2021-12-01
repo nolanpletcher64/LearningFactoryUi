@@ -30,6 +30,5 @@ void BackEnd::CSVstuff(const QString &newLocation)
     FILE* fpt;
     fpt = fopen("data.csv", "r");
     fclose(fpt);
-
-
 }
+

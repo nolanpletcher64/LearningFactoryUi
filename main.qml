@@ -29,7 +29,7 @@ ApplicationWindow {
 
             ToolButton {
                 id: start
-                text: qsTr("Start Task")
+                text: qsTr("Start Queue")
 
                 background: Rectangle {
                     implicitHeight: 50
@@ -40,7 +40,7 @@ ApplicationWindow {
 
             ToolButton {
                 id: stop
-                text: qsTr("Stop Task")
+                text: qsTr("Stop Queue")
 
                 background: Rectangle {
                     implicitHeight: 50
@@ -69,7 +69,89 @@ ApplicationWindow {
         }
     }
     property string newLoc;
-
+    property string newBox;
+    property Item test;
+    Item {
+        id:wtri
+        x:50
+        y:500
+    }
+    Item {
+        id:btri
+        x:165
+        y:500
+    }
+    Item {
+        id:bltri
+        x:70
+        y:500
+    }
+    Item {
+        id:rtri
+        x:70
+        y:500
+    }
+    Item {
+        id:wv
+        x:70
+        y:500
+    }
+    Item {
+        id:bv
+        x:70
+        y:1375
+    }
+    Item {
+        id:blv
+        x:70
+        y:1375
+    }
+    Item {
+        id:rv
+        x:70
+        y:1375
+    }
+    Item {
+        id:wcir
+        x:70
+        y:1375
+    }
+    Item {
+        id:bcir
+        x:70
+        y:1375
+    }
+    Item {
+        id:blcir
+        x:70
+        y:1375
+    }
+    Item {
+        id:rcir
+        x:70
+        y:1375
+    }
+    Item {
+        id:wsqu
+        x:70
+        y:1375
+    }
+    Item {
+        id:bsqu
+        x:70
+        y:1375
+    }
+    Item {
+        id:blsqu
+        x:70
+        y:1375
+    }
+    Item {
+        id:rsqu
+        x:70
+        y:1375
+    }
+    //property string newLoc;
     // Main stack layout for the pages
     StackLayout {
         width: parent.width

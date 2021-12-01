@@ -96,198 +96,196 @@ Item {
         y: 21
     }
     //labels--------------------
-    property double wtrix: 165;
-    property double wtriy: 292.5;
+    //property double wtrix: 165;
+    //property double wtriy: 292.5;
     Shape {
         width: 200
         height: 150
         ShapePath {
             fillColor: "white"
-            startX: (wtrix + 25); startY: wtriy
-            PathLine { x: wtrix; y: (wtriy + 50)}
-            PathLine { x: (wtrix + 50); y: (wtriy + 50)}
-            PathLine { x: (wtrix + 25); y: wtriy}
+            startX: (wtri.x + 25); startY: wtri.y
+            PathLine { x: wtri.x; y: (wtri.y + 50)}
+            PathLine { x: (wtri.x + 50); y: (wtri.y + 50)}
+            PathLine { x: (wtri.x + 25); y: wtri.y}
         }
     }
-    property double btrix: 165;
-    property double btriy: 292.5;
+    //property double btrix: 165;
+    //property double btriy: 292.5;
     Shape {
         width: 200
         height: 150
         ShapePath {
             fillColor: "black"
-            startX: (btrix + 25); startY: btriy
-            PathLine { x: btrix; y: (btriy + 50)}
-            PathLine { x: (btrix + 50); y: (btriy + 50)}
-            PathLine { x: (btrix + 25); y: btriy}
+            startX: (btri.x + 25); startY: btri.y
+            PathLine { x: btri.x; y: (btri.y + 50)}
+            PathLine { x: (btri.x + 50); y: (btri.y + 50)}
+            PathLine { x: (btri.x + 25); y: btri.y}
         }
     }
-    property double bltrix: 165;
-    property double bltriy: 292.5;
+    //property double bltrix: 165;
+    //property double bltriy: 292.5;
     Shape {
         width: 200
         height: 150
         ShapePath {
             fillColor: "blue"
-            startX: (bltrix + 25); startY: bltriy
-            PathLine { x: bltrix; y: (bltriy + 50)}
-            PathLine { x: (bltrix + 50); y: (bltriy + 50)}
-            PathLine { x: (bltrix + 25); y: bltriy}
+            startX: (bltri.x + 25); startY: bltri.y
+            PathLine { x: bltri.x; y: (bltri.y + 50)}
+            PathLine { x: (bltri.x + 50); y: (bltri.y + 50)}
+            PathLine { x: (bltri.x + 25); y: bltri.y}
         }
     }
-    property double rtrix: 165;
-    property double rtriy: 292.5;
+    //property double rtrix: 165;
+    //property double rtriy: 292.5;
     Shape {
         width: 200
         height: 150
         ShapePath {
             fillColor: "red"
-            startX: (rtrix + 25); startY: rtriy
-            PathLine { x: rtrix; y: (rtriy + 50)}
-            PathLine { x: (rtrix + 50); y: (rtriy + 50)}
-            PathLine { x: (rtrix + 25); y: rtriy}
+            startX: (rtri.x + 25); startY: rtri.y
+            PathLine { x: rtri.x; y: (rtri.y + 50)}
+            PathLine { x: (rtri.x + 50); y: (rtri.y + 50)}
+            PathLine { x: (rtri.x + 25); y: rtri.y}
         }
     }
-    property double wvx: 165;
-    property double wvy: 137.5;
+    //property double wvx: 165;
+    //property double wvy: 137.5;
     Shape {
         //V shape
         width: 200
         height: 150
         ShapePath {
             fillColor: "white"
-            startX: wvx; startY: wvy
-            PathLine { x: wvx + 10; y: wvy }
-            PathLine { x: wvx + 25; y: wvy + 30}
-            PathLine { x: wvx + 40; y: wvy }
-            PathLine { x: wvx + 50; y: wvy }
-            PathLine { x: wvx + 25; y: wvy + 50}
-            PathLine { x: wvx; y: wvy }
+            startX: wv.x; startY: wv.y
+            PathLine { x: wv.x + 10; y: wv.y }
+            PathLine { x: wv.x + 25; y: wv.y + 30}
+            PathLine { x: wv.x + 40; y: wv.y }
+            PathLine { x: wv.x + 50; y: wv.y }
+            PathLine { x: wv.x + 25; y: wv.y + 50}
+            PathLine { x: wv.x; y: wv.y }
         }
     }
-    property double bvx: 165;
-    property double bvy: 137.5;
+    //property double bvx: 165;
+    //property double bvy: 137.5;
     Shape {
         //V shape
         width: 200
         height: 150
         ShapePath {
             fillColor: "black"
-            startX: bvx; startY: bvy
-            PathLine { x: bvx + 10; y: bvy }
-            PathLine { x: bvx + 25; y: bvy + 30}
-            PathLine { x: bvx + 40; y: bvy }
-            PathLine { x: bvx + 50; y: bvy }
-            PathLine { x: bvx + 25; y: bvy + 50}
-            PathLine { x: bvx; y: bvy }
+            startX: bv.x; startY: bv.y
+            PathLine { x: bv.x + 10; y: bv.y }
+            PathLine { x: bv.x + 25; y: bv.y + 30}
+            PathLine { x: bv.x + 40; y: bv.y }
+            PathLine { x: bv.x + 50; y: bv.y }
+            PathLine { x: bv.x + 25; y: bv.y + 50}
+            PathLine { x: bv.x; y: bv.y }
         }
     }
-    property double blvx: 165;
-    property double blvy: 137.5;
+    //property double blvx: 165;
+    //property double blvy: 137.5;
     Shape {
         //V shape
         width: 200
         height: 150
         ShapePath {
             fillColor: "blue"
-            startX: blvx; startY: blvy
-            PathLine { x: blvx + 10; y: blvy }
-            PathLine { x: blvx + 25; y: blvy + 30}
-            PathLine { x: blvx + 40; y: blvy }
-            PathLine { x: blvx + 50; y: blvy }
-            PathLine { x: blvx + 25; y: blvy + 50}
-            PathLine { x: blvx; y: blvy }
+            startX: blv.x; startY: blv.y
+            PathLine { x: blv.x + 10; y: blv.y }
+            PathLine { x: blv.x + 25; y: blv.y + 30}
+            PathLine { x: blv.x + 40; y: blv.y }
+            PathLine { x: blv.x + 50; y: blv.y }
+            PathLine { x: blv.x + 25; y: blv.y + 50}
+            PathLine { x: blv.x; y: blv.y }
         }
     }
-    property double rvx: 165;
-    property double rvy: 137.5;
+    //property double rvx: 165;
+    //property double rvy: 137.5;
     Shape {
         //V shape
         width: 200
         height: 150
         ShapePath {
             fillColor: "red"
-            startX: rvx; startY: rvy
-            PathLine { x: rvx + 10; y: rvy }
-            PathLine { x: rvx + 25; y: rvy + 30}
-            PathLine { x: rvx + 40; y: rvy }
-            PathLine { x: rvx + 50; y: rvy }
-            PathLine { x: rvx + 25; y: rvy + 50}
-            PathLine { x: rvx; y: rvy }
+            startX: rv.x; startY: rv.y
+            PathLine { x: rv.x + 10; y: rv.y }
+            PathLine { x: rv.x + 25; y: rv.y + 30}
+            PathLine { x: rv.x + 40; y: rv.y }
+            PathLine { x: rv.x + 50; y: rv.y }
+            PathLine { x: rv.x + 25; y: rv.y + 50}
+            PathLine { x: rv.x; y: rv.y }
         }
     }
-    property double wcirx: 70;
-    property double wciry: 60;
+    //property double wcirx: 70;
+    //property double wciry: 60;
     Rectangle {
-        x: wcirx
-        y: wciry
+        x: wcir.x
+        y: wcir.y
         width: 50
         height: 50
         color: "white" //input color
         radius: width*0.5
     }
-    property double bcirx: 70;
-    property double bciry: 137.5;
     Rectangle {
-        x: bcirx
-        y: bciry
+        x: bcir.x
+        y: bcir.y
         width: 50
         height: 50
         color: "black" //input color
         radius: width*0.5
     }
-    property double blcirx: 70;
-    property double blciry: 215;
+    //property double blcirx: 70;
+    //property double blciry: 215;
     Rectangle {
-        x: blcirx
-        y: blciry
+        x: blcir.x
+        y: blcir.y
         width: 50
         height: 50
         color: "blue" //input color
         radius: width*0.5
     }
-    property double rcirx: 70;
-    property double rciry: 292.5;
+    //property double rcirx: 70;
+    //property double rciry: 292.5;
     Rectangle {
-        x: rcirx
-        y: rciry
+        x: rcir.x
+        y: rcir.y
         width: 50
         height: 50
         color: "red" //input color
         radius: width*0.5
     }
-    property double wsqux: 165;
-    property double wsquy: 60;
+    //property double wsqux: 165;
+    //property double wsquy: 60;
     Rectangle {
-        x: wsqux
-        y: wsquy
+        x: wsqu.x
+        y: wsqu.y
         width: 50
         height: 50
         color: "white" //input color
     }
-    property double bsqux: 165;
-    property double bsquy: 60;
+    //property double bsqux: 165;
+    //property double bsquy: 60;
     Rectangle {
-        x: bsqux
-        y: bsquy
+        x: bsqu.x
+        y: bsqu.y
         width: 50
         height: 50
         color: "black" //input color
     }
-    property double blsqux: 280;
-    property double blsquy: 285;
+    //property double blsqux: 280;
+    //property double blsquy: 285;
     Rectangle {
-        x: blsqux
-        y: blsquy
+        x: blsqu.x
+        y: blsqu.y
         width: 50
         height: 50
         color: "blue" //input color
     }
-    property double rsqux: 280;
-    property double rsquy: 220;
+    //property double rsqux: 280;
+    //property double rsquy: 220;
     Rectangle {
-        x: rsqux
-        y: rsquy
+        x: rsqu.x
+        y: rsqu.y
         width: 50
         height: 50
         color: "red" //input color
@@ -302,8 +300,8 @@ Item {
       Drop Locations 1
       y = 50 , 115
       x = 280, 350 , 420 , 490 , 560
-      Drop Locations 2
 
+      Drop Locations 2
       y = 220 , 285
       x = 280, 350 , 420 , 490 , 560
       */
