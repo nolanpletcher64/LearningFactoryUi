@@ -69,6 +69,7 @@ ApplicationWindow {
         }
     }
     property string newLoc;
+
     // Main stack layout for the pages
     StackLayout {
         width: parent.width
