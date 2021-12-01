@@ -70,6 +70,7 @@ ApplicationWindow {
     }
     property string newLoc;
     property string newBox;
+    property variant slot1;
     property Item test;
     Item {
         id:wtri

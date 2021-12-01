@@ -123,87 +123,87 @@ Item {
             newLoc = taskInput.text;
             newBox = boxInput.text;
             //bcir.x = 250;
-            if (newBox == '1')
+            if (newBox == 'white triangle')
                 test = wtri
-            if (newBox == '2')
+            if (newBox == 'black triangle')
                 test = btri
-            if (newBox == '3')
+            if (newBox == 'blue triangle')
                 test = bltri
-            if (newBox == '4')
+            if (newBox == 'red triangle')
                 test = rtri
-            if (newBox == '5')
+            if (newBox == 'white v')
                 test = wv
-            if (newBox == '6')
+            if (newBox == 'black v')
                 test = bv
-            if (newBox == '7')
+            if (newBox == 'blue v')
                 test = blv
-            if (newBox == '8')
+            if (newBox == 'red v')
                 test = rv
-            if (newBox == '9')
+            if (newBox == 'white circle')
                 test = wcir
-            if (newBox == '10')
+            if (newBox == 'black circle')
                 test = bcir
-            if (newBox == '11')
+            if (newBox == 'clue circle')
                 test = blcir
-            if (newBox == '12')
+            if (newBox == 'red circle')
                 test = rcir
-            if (newBox == '13')
+            if (newBox == 'white square')
                 test = wsqu
-            if (newBox == '14')
+            if (newBox == 'black square')
                 test = bsqu
-            if (newBox == '15')
+            if (newBox == 'blue square')
                 test = blsqu
-            if (newBox == '16')
+            if (newBox == 'red square')
                 test = rsqu
-            if (newLoc == '1')
+            if (newLoc == 'mir 1')
             {
                 test.x = 70;
                 test.y = 60;
             }
-            if (newLoc == '2')
+            if (newLoc == 'mir 2')
             {
                 test.x = 70;
                 test.y = 137.5;
             }
-            if (newLoc == '3')
+            if (newLoc == 'mir 3')
             {
                 test.x = 70;
                 test.y = 215;
             }
-            if (newLoc == '4')
+            if (newLoc == 'mir 4')
             {
                 test.x = 70;
                 test.y = 292.5;
             }
-            if (newLoc == '5')
+            if (newLoc == 'mir 5')
             {
                 test.x = 165;
                 test.y = 60;
             }
-            if (newLoc == '6')
+            if (newLoc == 'mir 6')
             {
                 test.x = 165;
                 test.y = 137.5;
             }
-            if (newLoc == '7')
+            if (newLoc == 'mir 7')
             {
                 test.x = 165;
                 test.y = 215;
             }
-            if (newLoc == '8')
+            if (newLoc == 'mir 8')
             {
                 test.x = 165;
                 test.y = 292.5;
             }
-            if (newLoc == '9')
+            if (newLoc == 'drop 1')
             {
-                test.x = 70;
-                test.y = 60;
+                test.x = 50;
+                test.y = 280;
             }
-            if (newLoc == '10')
+            if (newLoc == 'drop 2')
             {
-                test.x = 70;
-                test.y = 60;
+                test.x = 220;
+                test.y = 280;
             }
             if (newLoc == '11')
             {
