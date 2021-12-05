@@ -13,6 +13,9 @@ Item {
         id:backend;
         Component.onCompleted: {//call backend signal and slot
             backend.newLocationChanged.connect(backend.logChange);
+            backend.newLocationChanged.connect(backend.readMirInventory);
+            backend.newLocationchanged.connect(backend.readLoc1Inventory);
+            backend.newLocationChanged.connect(backend.readLoc2Inventory);
         }
     }
     Rectangle {
@@ -197,8 +200,8 @@ Item {
             }
             if (newLoc == 'drop 1')
             {
-                test.x = 50;
-                test.y = 280;
+                test.x = 280;
+                test.y = 50;
             }
             if (newLoc == 'drop 2')
             {
