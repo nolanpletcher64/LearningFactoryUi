@@ -72,14 +72,14 @@ Item {
         }
         onPressed: {
             //backend.setNewLocation();
-            label8.text = label7.text;
-            label7.text = label6.text;
-            label6.text = label5.text;
-            label5.text = label4.text;
-            label4.text = label3.text;
-            label3.text = label2.text;
-            label2.text = label.text;
-            label.text = newLoc;
+            label8.text = slot1[8].state;
+            label7.text = slot1[7].state;
+            label6.text = slot1[6].state;
+            label5.text = slot1[5].state;
+            label4.text = slot1[4].state;
+            label3.text = slot1[3].state;
+            label2.text = slot1[2].state;
+            label.text = slot1[1].state;
 
             //backend.setNewLocation();
         }

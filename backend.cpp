@@ -10,12 +10,32 @@ QString BackEnd::newLocation()
 {
     return m_newLocation;
 }
+QString BackEnd::mirInv(int i)
+{
+    //int i = size(mirInventory) - 1;
+    std::string temp = mirInventory[i];
+    QString str = QString::fromUtf8(temp.c_str());
+    return str;
+}
+void BackEnd::appendMirInv(QString tester)
+{
+    //int i = size(mirInventory);
+    std::string input = tester.toUtf8().constData();
+    mirInventory.push_back(input);
+}
+void BackEnd::changeMirInv(QString tester, int changer)
+{
+    std::string input = tester.toUtf8().constData();
+    mirInventory[changer] = input;
+}
 void BackEnd::setNewLocation(const QString &newLocation)
 {
     FILE* fpt;
     if (newLocation == m_newLocation)
         return;
     m_newLocation = newLocation;
+    //std::string text = newLocation.toUtf8().constData();
+    //mirInventory[0] = text;
     fpt = fopen("data.csv", "a+");
     fprintf(fpt,"%s\n",newLocation.toUtf8().constData());
     fclose(fpt);
@@ -76,7 +96,7 @@ void BackEnd::readMirInventory()
 // Function for writing MiR100 inventory
 void BackEnd::writeMirInventory()
 {
-    std::ofstream myFile("mirInventory.csv", std::ofstream::out | std::ofstream::trunc);
+    std::ofstream myFile("mirInventory.csv", std::ofstream::trunc);
 
     for (int i = 0; i < mirInventory.size(); i++)
     {

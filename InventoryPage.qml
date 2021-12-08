@@ -2,7 +2,6 @@ import QtQuick 2.0
 import QtQuick.Shapes 1.15
 //640 480
 Item {
-    //back ground
     Rectangle {
         x: 40
         y: 40

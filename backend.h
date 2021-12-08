@@ -12,11 +12,15 @@ class BackEnd : public QObject
 public:
     explicit BackEnd(QObject *parent = nullptr);
     QString newLocation();
+
     Q_INVOKABLE void setNewLocation(const QString &newLocation);
 signals:
     void newLocationChanged(const QString &newLocation);
 
 public slots:
+    QString mirInv(int i);
+    void appendMirInv(QString tester);
+    void changeMirInv(QString tester, int changer);
     void logChange(const QString &newLocation);
     void CSVstuff(const QString &newLocation);
     void readMirInventory();

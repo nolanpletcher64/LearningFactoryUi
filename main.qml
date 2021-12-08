@@ -70,85 +70,109 @@ ApplicationWindow {
     }
     property string newLoc;
     property string newBox;
-    property variant slot1;
+
+    property variant slot1: {1:empty,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty};
+    property variant slot2: {1:empty,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty,9:empty,10:empty,11:empty,12:empty,13:empty,14:empty,15:empty,16:empty};
+    property variant slot3: {1:empty,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty,9:empty,10:empty,11:empty,12:empty,13:empty,14:empty,15:empty,16:empty};
+
     property Item test;
     Item {
+        id:empty
+        state:'empty'
+    }
+    Item {
         id:wtri
+        state: 'wtri'
         x:50
         y:500
     }
     Item {
         id:btri
+        state: 'btri'
         x:165
         y:500
     }
     Item {
         id:bltri
+        state: 'bltri'
         x:70
         y:500
     }
     Item {
         id:rtri
+        state: 'rtri'
         x:70
         y:500
     }
     Item {
         id:wv
+        state: 'wv'
         x:70
         y:500
     }
     Item {
         id:bv
+        state: 'bv'
         x:70
         y:1375
     }
     Item {
         id:blv
+        state: 'blv'
         x:70
         y:1375
     }
     Item {
         id:rv
+        state: 'rv'
         x:70
         y:1375
     }
     Item {
         id:wcir
+        state: 'wcir'
         x:70
         y:1375
     }
     Item {
         id:bcir
+        state: 'bcir'
         x:70
         y:1375
     }
     Item {
         id:blcir
+        state: 'blcir'
         x:70
         y:1375
     }
     Item {
         id:rcir
+        state: 'rcir'
         x:70
         y:1375
     }
     Item {
         id:wsqu
+        state: 'wsqu'
         x:70
         y:1375
     }
     Item {
         id:bsqu
+        state: 'bsqu'
         x:70
         y:1375
     }
     Item {
         id:blsqu
+        state: 'blsqu'
         x:70
         y:1375
     }
     Item {
         id:rsqu
+        state: 'rsqu'
         x:70
         y:1375
     }
