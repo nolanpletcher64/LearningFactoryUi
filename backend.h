@@ -19,8 +19,12 @@ signals:
 
 public slots:
     QString mirInv(int i);
+    QString loc1Inv(int i);
+    QString loc2Inv(int i);
     void appendMirInv(QString tester);
     void changeMirInv(QString tester, int changer);
+    void changeLoc1Inv(QString tester, int changer);
+    void changeLoc2Inv(QString tester, int changer);
     void logChange(const QString &newLocation);
     void CSVstuff(const QString &newLocation);
     void readMirInventory();

@@ -53,19 +53,19 @@ Item {
         verticalAlignment: Text.AlignVCenter
     }
     Text {
-        text: "Package Zone 1"
+        text: "loc_1"
         x: 478
         y: 155
         verticalAlignment: Text.AlignVCenter
     }
     Text {
-        text: "Base Station"
+        text: "loc_2"
         x: 478
         y: 180
         verticalAlignment: Text.AlignVCenter
     }
     Text {
-        text: "Human Loading Zone"
+        text: "mir_slot_number"
         x: 462
         y: 205
         verticalAlignment: Text.AlignVCenter
@@ -126,7 +126,7 @@ Item {
             newLoc = taskInput.text;
             newBox = boxInput.text;
             for (var i = 0; i < 8; i++)  {
-                if(backend.mirInv(i) !== 'empty')
+                if(backend.mirInv(i) !== 'empty' && newLoc !== 'loc_1' && newLoc !== 'loc_2')
                 {
                     if (backend.mirInv(i) === 'white_triangle')
                         slot1[i+1] = wtri
@@ -163,7 +163,85 @@ Item {
                 }
                 i++
             }
+            for (var i = 0; i < 8; i++)  {
+                if(backend.loc1Inv(i) !== 'empty' && newLoc === 'loc_1')
+                {
+                    if (backend.mirInv(i) === 'white_triangle')
+                        slot2[i+1] = wtri
+                    if (backend.mirInv(i) === 'black_triangle')
+                        slot2[i+1] = btri
+                    if (backend.mirInv(i) === 'blue_triangle')
+                        slot2[i+1] = bltri
+                    if (backend.mirInv(i) === 'red_triangle')
+                        slot2[i+1] = rtri
+                    if (backend.mirInv(i) === 'white_v')
+                        slot2[i+1] = wv
+                    if (backend.mirInv(i) === 'black_v')
+                        slot2[i+1] = bv
+                    if (backend.mirInv(i) === 'blue_v')
+                        slot2[i+1] = blv
+                    if (backend.mirInv(i) === 'red_v')
+                        slot2[i+1] = rv
+                    if (backend.mirInv(i) === 'white_circle')
+                        slot2[i+1] = wcir
+                    if (backend.mirInv(i) === 'black_circle')
+                        slot2[i+1] = bcir
+                    if (backend.mirInv(i) === 'blue_circle')
+                        slot2[i+1] = blcir
+                    if (backend.mirInv(i) === 'red_circle')
+                        slot2[i+1] = rcir
+                    if (backend.mirInv(i) === 'white_square')
+                        slot2[i+1] = wsqu
+                    if (backend.mirInv(i) === 'black_square')
+                        slot2[i+1] = bsqu
+                    if (backend.mirInv(i) === 'blue_square')
+                        slot2[i+1] = blsqu
+                    if (backend.mirInv(i) === 'red_square')
+                        slot2[i+1] = rsqu
+                }
+                i++
+            }
+            for (var i = 0; i < 8; i++)  {
+                if(backend.loc2Inv(i) !== 'empty' && newLoc === 'loc_2')
+                {
+                    if (backend.mirInv(i) === 'white_triangle')
+                        slot3[i+1] = wtri
+                    if (backend.mirInv(i) === 'black_triangle')
+                        slot3[i+1] = btri
+                    if (backend.mirInv(i) === 'blue_triangle')
+                        slot3[i+1] = bltri
+                    if (backend.mirInv(i) === 'red_triangle')
+                        slot3[i+1] = rtri
+                    if (backend.mirInv(i) === 'white_v')
+                        slot3[i+1] = wv
+                    if (backend.mirInv(i) === 'black_v')
+                        slot3[i+1] = bv
+                    if (backend.mirInv(i) === 'blue_v')
+                        slot3[i+1] = blv
+                    if (backend.mirInv(i) === 'red_v')
+                        slot3[i+1] = rv
+                    if (backend.mirInv(i) === 'white_circle')
+                        slot3[i+1] = wcir
+                    if (backend.mirInv(i) === 'black_circle')
+                        slot3[i+1] = bcir
+                    if (backend.mirInv(i) === 'blue_circle')
+                        slot3[i+1] = blcir
+                    if (backend.mirInv(i) === 'red_circle')
+                        slot3[i+1] = rcir
+                    if (backend.mirInv(i) === 'white_square')
+                        slot3[i+1] = wsqu
+                    if (backend.mirInv(i) === 'black_square')
+                        slot3[i+1] = bsqu
+                    if (backend.mirInv(i) === 'blue_square')
+                        slot3[i+1] = blsqu
+                    if (backend.mirInv(i) === 'red_square')
+                        slot3[i+1] = rsqu
+                }
+                i++
+            }
             backend.writeMirInventory();
+            backend.writeLoc1Inventory();
+            backend.writeLoc2Inventory();
             if (newBox == 'white_triangle')
                 test = wtri
             if (newBox == 'black_triangle')
@@ -235,70 +313,27 @@ Item {
             {
                 backend.changeMirInv(newBox, 7)
                 slot1[8] = test;
-            }/*
-            if (newLoc == 'drop 1')
-            {
-                test.x = 280;
-                test.y = 50;
-                slot2[1] = test;
             }
-            if (newLoc == 'drop 2')
+            if(newLoc == 'loc_1')
             {
-                test.x = 220;
-                test.y = 280;
-                slot2[2] = test;
+                for (var i = 0; i < 10; i++)  {
+                    if (slot2[i] === 'empty')
+                    {
+                        backend.changeLoc1Inv(newBox,i);
+                        i = 10;
+                    }
+                }
             }
-            if (newLoc == '11')
+            if(newLoc == 'loc_2')
             {
-                test.x = 70;
-                test.y = 60;
+                for (var i = 0; i < 10; i++)  {
+                    if (slot3[i] === 'empty')
+                    {
+                        backend.changeLoc2Inv(newBox,i);
+                        i = 10;
+                    }
+                }
             }
-            if (newLoc == '12')
-            {
-                test.x = 70;
-                test.y = 60;
-            }
-            if (newLoc == '13')
-            {
-                test.x = 70;
-                test.y = 60;
-            }
-            if (newLoc == '14')
-            {
-                test.x = 70;
-                test.y = 60;
-            }
-            if (newLoc == '15')
-            {
-                test.x = 70;
-                test.y = 60;
-            }
-            if (newLoc == '16')
-            {
-                test.x = 70;
-                test.y = 60;
-            }
-            if (newLoc == '17')
-            {
-                test.x = 70;
-                test.y = 60;
-            }
-            if (newLoc == '18')
-            {
-                test.x = 70;
-                test.y = 60;
-            }
-            if (newLoc == '19')
-            {
-                test.x = 70;
-                test.y = 60;
-            }
-            if (newLoc == '20')
-            {
-                test.x = 70;
-                test.y = 60;
-            }
-            */
             if(slot1[1] !== empty)
             {
                 slot1[1].x = 70;
@@ -339,7 +374,108 @@ Item {
                 slot1[8].x = 165;
                 slot1[8].y = 292.5;
             }
-
+            //hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
+            if(slot2[1] !== empty)
+            {
+                slot2[1].y = 50;
+                slot2[1].x = 280;
+            }
+            if(slot2[2] !== empty)
+            {
+                slot2[2].y = 50;
+                slot2[2].x = 350;
+            }
+            if(slot2[3] !== empty)
+            {
+                slot2[3].y = 50;
+                slot2[3].x = 420;
+            }
+            if(slot2[4] !== empty)
+            {
+                slot2[4].y = 50;
+                slot2[4].x = 490;
+            }
+            if(slot2[5] !== empty)
+            {
+                slot2[5].y = 115;
+                slot2[5].x = 280;
+            }
+            if(slot2[6] !== empty)
+            {
+                slot2[6].y = 115;
+                slot2[6].x = 350;
+            }
+            if(slot2[7] !== empty)
+            {
+                slot2[7].y = 115;
+                slot2[7].x = 420;
+            }
+            if(slot2[8] !== empty)
+            {
+                slot2[8].y = 115;
+                slot2[8].x = 490;
+            }
+            if(slot2[9] !== empty)
+            {
+                slot2[9].y = 115;
+                slot2[9].x = 560;
+            }
+            if(slot2[10] !== empty)
+            {
+                slot2[10].y = 50;
+                slot2[10].x = 560;
+            }
+            //yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+            if(slot3[1] !== empty)
+            {
+                slot3[1].y = 220;
+                slot3[1].x = 280;
+            }
+            if(slot3[2] !== empty)
+            {
+                slot3[2].y = 220;
+                slot3[2].x = 350;
+            }
+            if(slot3[3] !== empty)
+            {
+                slot3[3].y = 220;
+                slot3[3].x = 420;
+            }
+            if(slot3[4] !== empty)
+            {
+                slot3[4].y = 220;
+                slot3[4].x = 490;
+            }
+            if(slot3[5] !== empty)
+            {
+                slot3[5].y = 285;
+                slot3[5].x = 280;
+            }
+            if(slot3[6] !== empty)
+            {
+                slot3[6].y = 285;
+                slot3[6].x = 350;
+            }
+            if(slot3[7] !== empty)
+            {
+                slot3[7].y = 285;
+                slot3[7].x = 420;
+            }
+            if(slot3[8] !== empty)
+            {
+                slot3[8].y = 285;
+                slot3[8].x = 490;
+            }
+            if(slot3[9] !== empty)
+            {
+                slot3[9].y = 285;
+                slot3[9].x = 560;
+            }
+            if(slot3[10] !== empty)
+            {
+                slot3[10].y = 220;
+                slot3[10].x = 560;
+            }
         }
     }
     Text{

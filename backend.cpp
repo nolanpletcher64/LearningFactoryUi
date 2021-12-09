@@ -17,9 +17,20 @@ QString BackEnd::mirInv(int i)
     QString str = QString::fromUtf8(temp.c_str());
     return str;
 }
+QString BackEnd::loc1Inv(int i)
+{
+    std::string temp = loc1Inventory[i];
+    QString str = QString::fromUtf8(temp.c_str());
+    return str;
+}
+QString BackEnd::loc2Inv(int i)
+{
+    std::string temp = loc2Inventory[i];
+    QString str = QString::fromUtf8(temp.c_str());
+    return str;
+}
 void BackEnd::appendMirInv(QString tester)
 {
-    //int i = size(mirInventory);
     std::string input = tester.toUtf8().constData();
     mirInventory.push_back(input);
 }
@@ -27,6 +38,16 @@ void BackEnd::changeMirInv(QString tester, int changer)
 {
     std::string input = tester.toUtf8().constData();
     mirInventory[changer] = input;
+}
+void BackEnd::changeLoc1Inv(QString tester, int changer)
+{
+    std::string input = tester.toUtf8().constData();
+    loc1Inventory[changer] = input;
+}
+void BackEnd::changeLoc2Inv(QString tester, int changer)
+{
+    std::string input = tester.toUtf8().constData();
+    loc2Inventory[changer] = input;
 }
 void BackEnd::setNewLocation(const QString &newLocation)
 {
@@ -141,7 +162,7 @@ void BackEnd::readLoc1Inventory()
 // Function for writing location 1 inventory
 void BackEnd::writeLoc1Inventory()
 {
-    std::ofstream myFile("loc1Inventory.csv", std::ofstream::out | std::ofstream::trunc);
+    std::ofstream myFile("loc1Inventory.csv", std::ofstream::trunc);
 
     myFile.clear();
 
@@ -189,7 +210,7 @@ void BackEnd::readLoc2Inventory()
 // Function for writing location 2 inventory
 void BackEnd::writeLoc2Inventory()
 {
-    std::ofstream myFile("loc2Inventory.csv", std::ofstream::out | std::ofstream::trunc);
+    std::ofstream myFile("loc2Inventory.csv", std::ofstream::trunc);
 
     // Write each line to csv
     for (int i = 0; i < loc2Inventory.size(); i++)

@@ -4,9 +4,9 @@ import QtQuick 2.0
 Item {
     Rectangle {
         x: 200
-        y: 250
+        y: 270
         implicitHeight: 100
-        implicitWidth: 350
+        implicitWidth: 370
         color: "lightgray"
     }
     Rectangle {
@@ -31,7 +31,7 @@ Item {
         color: "tomato"
     }
     Rectangle {
-        x: 200
+        x: 300
         y: 140
         implicitHeight: 40
         implicitWidth: 70
@@ -39,7 +39,7 @@ Item {
     }
     Text {
         text: "Package Zone 1"
-        x: 70
-        y: 80
+        x: 65
+        y: 60
     }
 }
