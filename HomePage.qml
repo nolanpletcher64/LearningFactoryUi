@@ -46,6 +46,13 @@ Item {
         implicitWidth: 150
         color: "lightskyblue"
     }
+    Rectangle {
+        x: 270
+        y: 150
+        implicitHeight: 100
+        implicitWidth: 150
+        color: "lightskyblue"
+    }
     Text {
         text: "Valid Locations"
         x: 480
@@ -53,21 +60,81 @@ Item {
         verticalAlignment: Text.AlignVCenter
     }
     Text {
+        text: "Valid Boxes"
+        x: 315
+        y: 130
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
         text: "loc_1"
-        x: 478
+        x: 505
         y: 155
         verticalAlignment: Text.AlignVCenter
     }
     Text {
         text: "loc_2"
-        x: 478
+        x: 505
         y: 180
         verticalAlignment: Text.AlignVCenter
     }
     Text {
-        text: "mir_slot_number"
-        x: 462
+        text: "mir_(slotNum)"
+        x: 480
         y: 205
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "(color)_(shape)"
+        x: 295
+        y: 155
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "white"
+        x: 295
+        y: 180
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "black"
+        x: 295
+        y: 195
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "red"
+        x: 295
+        y: 210
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "blue"
+        x: 295
+        y: 225
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "circle"
+        x: 350
+        y: 180
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "triangle"
+        x: 350
+        y: 195
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "square"
+        x: 350
+        y: 210
+        verticalAlignment: Text.AlignVCenter
+    }
+    Text {
+        text: "v"
+        x: 350
+        y: 225
         verticalAlignment: Text.AlignVCenter
     }
     Rectangle {
@@ -106,7 +173,7 @@ Item {
     }
     Text{
         id:labelBackend;
-        text: "Current Task"
+        text: "Going to Arm"
         x: 115
         y: 140
     }
@@ -163,85 +230,87 @@ Item {
                 }
                 i++
             }
+            /*
             for (var i = 0; i < 8; i++)  {
-                if(backend.loc1Inv(i) !== 'empty' && newLoc === 'loc_1')
+                if(slot2[i+1] !== 'empty' && newLoc === 'loc_1')
                 {
-                    if (backend.mirInv(i) === 'white_triangle')
+                    if (backend.loc1Inv(i) === 'white_triangle')
                         slot2[i+1] = wtri
-                    if (backend.mirInv(i) === 'black_triangle')
+                    if (backend.loc1Inv(i) === 'black_triangle')
                         slot2[i+1] = btri
-                    if (backend.mirInv(i) === 'blue_triangle')
+                    if (backend.loc1Inv(i) === 'blue_triangle')
                         slot2[i+1] = bltri
-                    if (backend.mirInv(i) === 'red_triangle')
+                    if (backend.loc1Inv(i) === 'red_triangle')
                         slot2[i+1] = rtri
-                    if (backend.mirInv(i) === 'white_v')
+                    if (backend.loc1Inv(i) === 'white_v')
                         slot2[i+1] = wv
-                    if (backend.mirInv(i) === 'black_v')
+                    if (backend.loc1Inv(i) === 'black_v')
                         slot2[i+1] = bv
-                    if (backend.mirInv(i) === 'blue_v')
+                    if (backend.loc1Inv(i) === 'blue_v')
                         slot2[i+1] = blv
-                    if (backend.mirInv(i) === 'red_v')
+                    if (backend.loc1Inv(i) === 'red_v')
                         slot2[i+1] = rv
-                    if (backend.mirInv(i) === 'white_circle')
+                    if (backend.loc1Inv(i) === 'white_circle')
                         slot2[i+1] = wcir
-                    if (backend.mirInv(i) === 'black_circle')
+                    if (backend.loc1Inv(i) === 'black_circle')
                         slot2[i+1] = bcir
-                    if (backend.mirInv(i) === 'blue_circle')
+                    if (backend.loc1Inv(i) === 'blue_circle')
                         slot2[i+1] = blcir
-                    if (backend.mirInv(i) === 'red_circle')
+                    if (backend.loc1Inv(i) === 'red_circle')
                         slot2[i+1] = rcir
-                    if (backend.mirInv(i) === 'white_square')
+                    if (backend.loc1Inv(i) === 'white_square')
                         slot2[i+1] = wsqu
-                    if (backend.mirInv(i) === 'black_square')
+                    if (backend.loc1Inv(i) === 'black_square')
                         slot2[i+1] = bsqu
-                    if (backend.mirInv(i) === 'blue_square')
+                    if (backend.loc1Inv(i) === 'blue_square')
                         slot2[i+1] = blsqu
-                    if (backend.mirInv(i) === 'red_square')
+                    if (backend.loc1Inv(i) === 'red_square')
                         slot2[i+1] = rsqu
                 }
                 i++
             }
             for (var i = 0; i < 8; i++)  {
-                if(backend.loc2Inv(i) !== 'empty' && newLoc === 'loc_2')
+                if(slot3[i+1] !== 'empty' && newLoc === 'loc_2')
                 {
-                    if (backend.mirInv(i) === 'white_triangle')
+                    if (backend.loc2Inv(i) === 'white_triangle')
                         slot3[i+1] = wtri
-                    if (backend.mirInv(i) === 'black_triangle')
+                    if (backend.loc2Inv(i) === 'black_triangle')
                         slot3[i+1] = btri
-                    if (backend.mirInv(i) === 'blue_triangle')
+                    if (backend.loc2Inv(i) === 'blue_triangle')
                         slot3[i+1] = bltri
-                    if (backend.mirInv(i) === 'red_triangle')
+                    if (backend.loc2Inv(i) === 'red_triangle')
                         slot3[i+1] = rtri
-                    if (backend.mirInv(i) === 'white_v')
+                    if (backend.loc2Inv(i) === 'white_v')
                         slot3[i+1] = wv
-                    if (backend.mirInv(i) === 'black_v')
+                    if (backend.loc2Inv(i) === 'black_v')
                         slot3[i+1] = bv
-                    if (backend.mirInv(i) === 'blue_v')
+                    if (backend.loc2Inv(i) === 'blue_v')
                         slot3[i+1] = blv
-                    if (backend.mirInv(i) === 'red_v')
+                    if (backend.loc2Inv(i) === 'red_v')
                         slot3[i+1] = rv
-                    if (backend.mirInv(i) === 'white_circle')
+                    if (backend.loc2Inv(i) === 'white_circle')
                         slot3[i+1] = wcir
-                    if (backend.mirInv(i) === 'black_circle')
+                    if (backend.loc2Inv(i) === 'black_circle')
                         slot3[i+1] = bcir
-                    if (backend.mirInv(i) === 'blue_circle')
+                    if (backend.loc2Inv(i) === 'blue_circle')
                         slot3[i+1] = blcir
-                    if (backend.mirInv(i) === 'red_circle')
+                    if (backend.loc2Inv(i) === 'red_circle')
                         slot3[i+1] = rcir
-                    if (backend.mirInv(i) === 'white_square')
+                    if (backend.loc2Inv(i) === 'white_square')
                         slot3[i+1] = wsqu
-                    if (backend.mirInv(i) === 'black_square')
+                    if (backend.loc2Inv(i) === 'black_square')
                         slot3[i+1] = bsqu
-                    if (backend.mirInv(i) === 'blue_square')
+                    if (backend.loc2Inv(i) === 'blue_square')
                         slot3[i+1] = blsqu
-                    if (backend.mirInv(i) === 'red_square')
+                    if (backend.loc2Inv(i) === 'red_square')
                         slot3[i+1] = rsqu
                 }
                 i++
             }
+            */
             backend.writeMirInventory();
-            backend.writeLoc1Inventory();
-            backend.writeLoc2Inventory();
+            //backend.writeLoc1Inventory();
+            //backend.writeLoc2Inventory();
             if (newBox == 'white_triangle')
                 test = wtri
             if (newBox == 'black_triangle')
@@ -316,24 +385,25 @@ Item {
             }
             if(newLoc == 'loc_1')
             {
-                for (var i = 0; i < 10; i++)  {
-                    if (slot2[i] === 'empty')
+                for (var p = 1; p < 10; p++)  {
+                    if (slot2[p] === empty)
                     {
-                        backend.changeLoc1Inv(newBox,i);
-                        i = 10;
+                        slot2[p] = test;
+                        p = 10;
                     }
                 }
             }
             if(newLoc == 'loc_2')
             {
-                for (var i = 0; i < 10; i++)  {
-                    if (slot3[i] === 'empty')
+                for (var k = 1; k < 10; k++)  {
+                    if (slot3[k] === empty)
                     {
-                        backend.changeLoc2Inv(newBox,i);
-                        i = 10;
+                        slot3[k] = test;
+                        k = 10;
                     }
                 }
             }
+
             if(slot1[1] !== empty)
             {
                 slot1[1].x = 70;

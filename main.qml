@@ -72,8 +72,12 @@ ApplicationWindow {
     property string newBox;
 
     property variant slot1: {1:empty,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty};
-    property variant slot2: {1:empty,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty,9:empty,10:empty,11:empty,12:empty,13:empty,14:empty,15:empty,16:empty};
-    property variant slot3: {1:empty,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty,9:empty,10:empty,11:empty,12:empty,13:empty,14:empty,15:empty,16:empty};
+    property variant slot2: {1:blv,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty,9:empty,10:empty,11:empty,12:empty,13:empty,14:empty,15:empty,16:empty};
+    property variant slot3: {1:rv,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty,9:empty,10:empty,11:empty,12:empty,13:empty,14:empty,15:empty,16:empty};
+
+    property variant fslot1: {1:empty,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty};
+    property variant fslot2: {1:blv,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty,9:empty,10:empty,11:empty,12:empty,13:empty,14:empty,15:empty,16:empty};
+    property variant fslot3: {1:rv,2:empty,3:empty,4:empty,5:empty,6:empty,7:empty,8:empty,9:empty,10:empty,11:empty,12:empty,13:empty,14:empty,15:empty,16:empty};
 
     property Item test;
     Item {
